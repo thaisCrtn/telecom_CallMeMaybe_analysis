@@ -1,0 +1,18 @@
+# Ambientes Virtuais Python
+.venv/
+venv/
+env/
+
+# Arquivos ocultos do Mac
+.DS_Store
+
+# Cache e arquivos compilados do Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Arquivos com senhas ou chaves de API (NUNCA envie para o GitHub)
+.env
+
+# Local datasets
+data/*.csv
