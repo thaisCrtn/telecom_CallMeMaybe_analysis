@@ -34,7 +34,7 @@ The project uses two datasets:
 
 The call dataset includes fields such as `user_id`, `date`, `direction`, `internal`, `operator_id`, `is_missed_call`, `calls_count`, `call_duration`, and `total_call_duration`.
 
-The source datasets are not included in this repository. Place the files in the `data/` directory before running the notebook. Use the dataset files supplied for the project and make sure their filenames match the paths in the notebook.
+The source datasets are intentionally not included in this repository. To reproduce the analysis, obtain the CSV files from an authorized project source and store them locally. Update the notebook's `pd.read_csv()` paths to match your local file locations.
 
 ## Data Preparation
 
@@ -117,34 +117,32 @@ The first four operators showed both high waiting time and high incoming missed-
 ## Repository Structure
 
 ```text
-CallMeMaybe/
-├── data/
-│   ├── telecom_dataset_new.csv
-│   └── telecom_clients.csv
-├── dashboard/
-│   └── CallMeMaybe — Operator Performance
+telecom_CallMeMaybe_analysis/
 ├── notebooks/
 │   └── CallMeMaybe_Notebook_EN.ipynb
 └── README.md
 ```
 
+The CSV datasets are kept outside the public repository. The notebook expects the input files at local paths defined in its `pd.read_csv()` statements; adjust those paths if your local setup differs.
+
 ## How to Run the Notebook
 
 1. Clone or download the repository.
-2. Add `telecom_dataset_new.csv` and `telecom_clients.csv` to the `data/` folder. These files are not included in this repository.
-3. Install the required Python packages:
+2. Obtain `telecom_dataset_new.csv` and `telecom_clients.csv` from an authorized project source. The datasets are not included in this repository.
+3. Update the two `pd.read_csv()` paths in the notebook so they point to the local CSV files.
+4. Install the required Python packages:
 
    ```bash
    pip install pandas numpy matplotlib seaborn scipy jupyter
    ```
 
-4. Open the notebook from the `notebooks/` directory:
+5. Open the notebook from the `notebooks/` directory:
 
    ```bash
    jupyter notebook CallMeMaybe_Notebook_EN.ipynb
    ```
 
-5. Run the notebook cells from top to bottom. The notebook reads the input files from `../data/`.
+6. Run the notebook cells from top to bottom.
 
 ---
 
